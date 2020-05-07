@@ -4,16 +4,18 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import "bootstrap/dist/css/bootstrap.css";
-import Counter from "./components/counter";
+import Counters from "./components/counters";
+import Test from "./components/test1";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Counter />
+    <Test />
+    <Counters />
     <App />
   </React.StrictMode>,
   document.getElementById("root")
 );
-const element = <h1>Test</h1>;
+const element = <h1>Hellow from a h1 tag</h1>;
 console.log(element);
 
 // If you want your app to work offline and load faster, you can change
