@@ -4,13 +4,13 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import "bootstrap/dist/css/bootstrap.css";
-//import Counters from "./components/counters"; //grey because not use
-import Test from "./components/test1";
+// import Counters from "./components/counters"; //grey because not use
+// import Test from "./components/test1";
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    <Test />
+    {/* <Test /> */}
     {/* <Counters /> */}
   </React.StrictMode>,
   document.getElementById("root")

@@ -10,7 +10,7 @@ class NavBar extends Component {
           className="navbar-brand"
           href="https://www.youtube.com/watch?v=Ke90Tje7VS0"
         >
-          Navbar{" "}
+          Navbar Text Body{" "}
           <span className="badge badge-pill badge-secondary">
             {this.props.totalCounters}
           </span>
