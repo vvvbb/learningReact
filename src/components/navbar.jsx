@@ -7,7 +7,7 @@ class NavBar extends Component {
     return (
       <nav className="navbar navbar-light bg-light">
         <a
-          className="navbar-brand"
+          className="navbar-brand m-auto"
           href="https://www.youtube.com/watch?v=Ke90Tje7VS0"
         >
           Navbar Text Body{" "}

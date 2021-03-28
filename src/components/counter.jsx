@@ -27,30 +27,32 @@ class Counter extends Component {
     // React.createElement("div")
     return (
       <div>
-        <div>
+        <div className="row no-gutters my-3">
           <button
             onClick={() => this.props.onDecrease(this.props.counter)}
-            className="btn btn-success btn-lg"
+            className="btn btn-success btn-lg "
           >
             Decrease -
           </button>
           <button
             onClick={() => this.props.onIncrement(this.props.counter)}
             // onClick={this.handleIncrement}
-            className="btn btn-success btn-lg"
+            className="btn btn-success btn-lg ml-3"
           >
             Increment +
           </button>
+
+          <div className="text-center m-auto">
+            {/* <span className={this.getBadgeClasses()}>{this.props.counter}</span> */}
+            <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
+          </div>
+
           <button
             onClick={() => this.props.onDelete(this.props.counter.id)}
-            className="btn btn-danger btn-sm m-2"
+            className="btn btn-danger btn-sm my-2  align-self-end ml-auto"
           >
             Delete
           </button>
-        </div>
-        <div>
-          {/* <span className={this.getBadgeClasses()}>{this.props.counter}</span> */}
-          <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
         </div>
       </div>
     );

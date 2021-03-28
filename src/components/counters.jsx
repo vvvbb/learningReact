@@ -11,7 +11,7 @@ class Counters extends Component {
         <button
           // onClick={this.props.onReset}
           onClick={onReset}
-          className="btn btn-outline-dark btn-sm m-2"
+          className="btn btn-outline-dark btn-sm my-2 d-block ml-auto"
         >
           Reset
         </button>
