@@ -3,6 +3,9 @@ import React, { Component } from "react";
 import "./App.css";
 import NavBar from "./components/navbar";
 import Counters from "./components/counters";
+import Greeting from "./components/Greeting";
+// import ButtonTry from "./components/ButtonTry";
+import CounterFunction from "./components/CounterFunction";
 
 class App extends Component {
   state = {
@@ -46,8 +49,12 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
+        <Greeting greeting={{ text: "Hello" }} grea={"uut"} />
+        {/* <ButtonTry value={"Hello World"} /> */}
+        <CounterFunction />
+
         <NavBar
-          totalCounters={this.state.counters.filter((c) => c.value > 0).length}
+          totalCounters={this.state.counters.filter((c) => c.value !== 0).length}
         />
         <main className="container">
           <Counters

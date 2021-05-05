@@ -5,7 +5,7 @@ import React, { Component } from "react";
 class NavBar extends Component {
   render() {
     return (
-      <nav className="navbar navbar-light bg-light">
+      <nav className="navbar navbar-light bg-light border-top border-bottom border-danger mt-3">
         <a
           className="navbar-brand m-auto"
           href="https://www.youtube.com/watch?v=Ke90Tje7VS0"
