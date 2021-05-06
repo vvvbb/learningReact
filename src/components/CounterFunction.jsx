@@ -4,7 +4,7 @@ const CounterFunction = () => {
   const [count, setCount] = React.useState(0);
 
   return (
-    <div className="text-center pt-5">
+    <div className="text-center pt-3">
       <p>count: {count}</p>
       <button
       onClick={() => setCount(count + 1)}

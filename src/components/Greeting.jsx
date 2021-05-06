@@ -17,7 +17,7 @@ class Greeting extends Component {
   render() {
     // const greeting = "Welcome to React";
 
-    return <h1 className="text-center">{this.props.greeting.text} || {this.props.grea}</h1>;
+    return <h1 className="text-center">{this.props.greeting.text}</h1>;
   }
 }
 

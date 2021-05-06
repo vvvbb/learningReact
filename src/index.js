@@ -15,8 +15,6 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById("root")
 );
-const element = <h1>Hellow from a h1 tag</h1>;
-console.log(element);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

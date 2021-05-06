@@ -1,11 +1,15 @@
 import React, { Component } from "react";
 // import logo from "./logo.svg";
 import "./App.css";
+
 import NavBar from "./components/navbar";
 import Counters from "./components/counters";
 import Greeting from "./components/Greeting";
 // import ButtonTry from "./components/ButtonTry";
 import CounterFunction from "./components/CounterFunction";
+import PersonList from "./components/PersonList";
+
+// import React, { Component } from 'react'
 
 class App extends Component {
   state = {
@@ -49,14 +53,16 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <Greeting greeting={{ text: "Hello" }} grea={"uut"} />
-        {/* <ButtonTry value={"Hello World"} /> */}
+        <Greeting greeting={{ text: "Hello" }} />
         <CounterFunction />
 
         <NavBar
-          totalCounters={this.state.counters.filter((c) => c.value !== 0).length}
+          totalCounters={
+            this.state.counters.filter((c) => c.value !== 0).length
+          }
         />
-        <main className="container">
+
+        <section className="container">
           <Counters
             counters={this.state.counters}
             onReset={this.handleReset}
@@ -64,7 +70,9 @@ class App extends Component {
             onDecrease={this.handleDecrease}
             onDelete={this.handleDelete}
           />
-        </main>
+        </section>
+
+        <PersonList />
       </React.Fragment>
     );
   }
