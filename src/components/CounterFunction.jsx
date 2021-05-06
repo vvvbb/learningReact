@@ -7,6 +7,11 @@ const CounterFunction = () => {
     <div className="text-center pt-3">
       <p>count: {count}</p>
       <button
+      onClick={() => setCount(count - 1)}
+      className="btn btn-secondary mr-1">
+        unClick
+      </button>
+      <button
       onClick={() => setCount(count + 1)}
       className="btn btn-secondary">
         Click

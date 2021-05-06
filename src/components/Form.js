@@ -18,7 +18,9 @@ export default class Form extends Component {
       firstName: textValue,
     });
     */
-    this.setState({ [event.target.name]: [event.target.value] });
+    this.setState({
+        [event.target.name]: event.target.value
+    });
   };
 
   handleSubmit = (e) => {

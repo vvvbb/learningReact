@@ -7,6 +7,7 @@ import Counters from "./components/counters";
 import Greeting from "./components/Greeting";
 // import ButtonTry from "./components/ButtonTry";
 import CounterFunction from "./components/CounterFunction";
+import CounterFunctionStronger from "./components/CounterFunctionStronger";
 import PersonList from "./components/PersonList";
 import Form from "./components/Form";
 
@@ -56,6 +57,7 @@ class App extends Component {
       <React.Fragment>
         <Greeting greeting={{ text: "Hello" }} />
         <CounterFunction />
+        <CounterFunctionStronger amount="3" inc="4" dec="2" />
 
         <NavBar
           totalCounters={
