@@ -8,6 +8,7 @@ import Greeting from "./components/Greeting";
 // import ButtonTry from "./components/ButtonTry";
 import CounterFunction from "./components/CounterFunction";
 import PersonList from "./components/PersonList";
+import Form from "./components/Form";
 
 // import React, { Component } from 'react'
 
@@ -73,6 +74,7 @@ class App extends Component {
         </section>
 
         <PersonList />
+        <Form />
       </React.Fragment>
     );
   }
