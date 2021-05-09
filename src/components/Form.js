@@ -40,7 +40,7 @@ export default class Form extends Component {
 
   render() {
     return (
-      <section>
+      <section  style={{ backgroundColor: "#00008088" , border:"3px solid blue", margin:"0 0.5rem", padding:"2.5rem" }}>
         <article>
           <form onSubmit={this.handleSubmit} action="">
             <input

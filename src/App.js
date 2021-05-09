@@ -57,7 +57,7 @@ class App extends Component {
       <React.Fragment>
         <Greeting greeting={{ text: "Hello" }} />
         <CounterFunction />
-        <CounterFunctionStronger amount="3" inc="4" dec="2" />
+        <CounterFunctionStronger amount={11} inc={4} dec={7} />
 
         <NavBar
           totalCounters={
