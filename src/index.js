@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
+import ManageEvent from './components/ManageEvent';
+
 import * as serviceWorker from "./serviceWorker";
 import "bootstrap/dist/css/bootstrap.css";
 // import Counters from "./components/counters"; //grey because not use
@@ -10,6 +12,8 @@ import "bootstrap/dist/css/bootstrap.css";
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <ManageEvent />
+
     {/* <Test /> */}
     {/* <Counters /> */}
   </React.StrictMode>,
