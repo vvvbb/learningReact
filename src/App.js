@@ -11,7 +11,11 @@ import CounterFunctionStronger from "./components/CounterFunctionStronger";
 import PersonList from "./components/PersonList";
 import Form from "./components/Form";
 
+import ManageEvent from "./components/ManageEvent";
+
 // import React, { Component } from 'react'
+
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 class App extends Component {
   state = {
@@ -55,28 +59,34 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <Greeting greeting={{ text: "Hello" }} />
-        <CounterFunction />
-        <CounterFunctionStronger amount={11} inc={4} dec={7} />
-
+        <Router>
         <NavBar
           totalCounters={
             this.state.counters.filter((c) => c.value !== 0).length
           }
         />
+          <Route exact path="/">
+            <Greeting greeting={{ text: "Hello" }} />
+            <CounterFunction />
+            <CounterFunctionStronger amount={11} inc={4} dec={7} />
 
-        <section className="container">
-          <Counters
-            counters={this.state.counters}
-            onReset={this.handleReset}
-            onIncrement={this.handleIncrement}
-            onDecrease={this.handleDecrease}
-            onDelete={this.handleDelete}
-          />
-        </section>
+            <section className="container">
+              <Counters
+                counters={this.state.counters}
+                onReset={this.handleReset}
+                onIncrement={this.handleIncrement}
+                onDecrease={this.handleDecrease}
+                onDelete={this.handleDelete}
+              />
+            </section>
 
-        <PersonList />
-        <Form />
+            <PersonList />
+            <Form />
+          </Route>
+          <Route path="/a">
+            <ManageEvent />
+          </Route>
+        </Router>
       </React.Fragment>
     );
   }

@@ -1,20 +1,31 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 //stateless functionnal component
 
 class NavBar extends Component {
   render() {
     return (
-      <nav className="navbar navbar-light bg-light border-top border-bottom border-danger mt-3">
-        <a
-          className="navbar-brand m-auto"
-          href="https://www.youtube.com/watch?v=Ke90Tje7VS0"
-        >
-          Navbar Text Body{" "}
-          <span className="badge badge-pill badge-secondary">
-            {this.props.totalCounters}
-          </span>
-        </a>
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <div className="collapse navbar-collapse">
+          <ul className="navbar-nav w-100 justify-content-between">
+            <li className="nav-item active">
+              <Link className="nav-link" to="/">
+                Learning react
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/a">
+                ManageEvent
+              </Link>
+            </li>
+            <li>
+              <Link className="nav-link disabled" to="/a">
+                Disabled {this.props.totalCounters}
+              </Link>
+            </li>
+          </ul>
+        </div>
       </nav>
     );
   }
