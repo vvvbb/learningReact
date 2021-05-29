@@ -15,12 +15,12 @@ class NavBar extends Component {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/a">
-                ManageEvent
+              <Link className="nav-link" to="/calculator">
+                Calculator Project
               </Link>
             </li>
             <li>
-              <Link className="nav-link disabled" to="/a">
+              <Link className="nav-link disabled" to="/">
                 Disabled {this.props.totalCounters}
               </Link>
             </li>

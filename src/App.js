@@ -13,9 +13,11 @@ import Form from "./components/Form";
 
 import ManageEvent from "./components/ManageEvent";
 
+import Calculator from "./components/calculator/Calculator"
+
 // import React, { Component } from 'react'
 
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 class App extends Component {
   state = {
@@ -66,6 +68,7 @@ class App extends Component {
           }
         />
           <Route exact path="/">
+              <ManageEvent />
             <Greeting greeting={{ text: "Hello" }} />
             <CounterFunction />
             <CounterFunctionStronger amount={11} inc={4} dec={7} />
@@ -83,8 +86,8 @@ class App extends Component {
             <PersonList />
             <Form />
           </Route>
-          <Route path="/a">
-            <ManageEvent />
+          <Route path="/calculator">
+            <Calculator />
           </Route>
         </Router>
       </React.Fragment>
