@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 // import logo from "./logo.svg";
-import "./App.css";
+import "./App.scss";
 
 import NavBar from "./components/navbar";
 import Counters from "./components/counters";
@@ -14,6 +14,7 @@ import Form from "./components/Form";
 import ManageEvent from "./components/ManageEvent";
 
 import Calculator from "./components/calculator/Calculator"
+import CityList from "./components/foodlist/CityList"
 
 // import React, { Component } from 'react'
 
@@ -88,6 +89,9 @@ class App extends Component {
           </Route>
           <Route path="/calculator">
             <Calculator />
+          </Route>
+          <Route path="/city-list">
+            <CityList />
           </Route>
         </Router>
       </React.Fragment>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-import "./Calculator.css";
+import "./Calculator.scss";
 
 import ExpenseList from "./ExpenseList";
 import ExpenseForm from "./ExpenseForm";
