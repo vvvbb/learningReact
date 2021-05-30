@@ -4,7 +4,7 @@ import Item from "./ExpenseItem";
 const ExpenseList = ({ expenses, handleEdit, handleDelete, clearAllItems }) => {
   return (
     <>
-      <ul className="list">
+      <ul className="p-0">
         {expenses.map((expense) => {
           return (
             <Item
@@ -17,7 +17,7 @@ const ExpenseList = ({ expenses, handleEdit, handleDelete, clearAllItems }) => {
         })}
       </ul>
       {expenses.length > 0 && (
-        <button className="btn btn-primary" onClick={clearAllItems}>
+        <button className="btn btn-sm btn-outline-danger text-uppercase my-3" onClick={clearAllItems}>
           clear expenses
         </button>
       )}

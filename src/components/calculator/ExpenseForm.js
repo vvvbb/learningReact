@@ -6,13 +6,15 @@ const ExpenseForm = ({
   handleSubmit,
   handleAmount,
   handleCharge,
-  edit
+  edit,
 }) => {
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="form-row">
+    <form onSubmit={handleSubmit} className="py-3 w-50 mx-auto">
+      <div className="form-row px-5 ">
         <div className="form-group col">
-          <label htmlFor="charge">charge</label>
+          <label htmlFor="charge" className="text-uppercase">
+            Charge
+          </label>
           <input
             type="text"
             className="form-control"
@@ -24,7 +26,9 @@ const ExpenseForm = ({
           />
         </div>
         <div className="form-group col">
-          <label htmlFor="amount">amount</label>
+          <label htmlFor="amount" className="text-uppercase">
+            Amount
+          </label>
           <input
             type="number"
             className="form-control"
@@ -36,8 +40,8 @@ const ExpenseForm = ({
           />
         </div>
       </div>
-      <button className="btn  btn-outline-light" type="submit">
-        {edit ? "edit":"submit"}
+      <button className="btn  btn-light " type="submit">
+        {edit ? "EDIT" : "SUBMIT"}
       </button>
     </form>
   );

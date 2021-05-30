@@ -8,9 +8,9 @@ import ExpenseForm from "./ExpenseForm";
 import Alert from "./Alert";
 
 const initialExpenses = [
-  { id: uuidv4(), charge: "rent", amount: 1200 },
-  { id: uuidv4(), charge: "water", amount: 80 },
-  { id: uuidv4(), charge: "elect", amount: 60 },
+  { id: uuidv4(), charge: "house", amount: 1200 },
+  { id: uuidv4(), charge: "car", amount: 350 },
+  { id: uuidv4(), charge: "water", amount: 30 },
 ];
 
 console.log(initialExpenses);
@@ -72,7 +72,7 @@ export default function Calculator() {
     console.log(`handleDelete ${id}`);
     let tempExpenses = expenses.filter((item) => item.id !== id);
     setExpense(tempExpenses);
-    handleAlert({ type: "warning", text: `item ${id} deleted` });
+    handleAlert({ type: "warning", text: `item deleted` });
   };
   const handleEdit = (id) => {
     console.log(`handleEdit ${id}`);
@@ -87,6 +87,7 @@ export default function Calculator() {
   return (
     <>
       <section className="calculator">
+        <h1 className="py-3">Calculator Project</h1>
         {alert.show && <Alert type={alert.type} text={alert.text} />}
         <ExpenseForm
           charge={charge}
@@ -103,12 +104,15 @@ export default function Calculator() {
           clearAllItems={clearAllItems}
         />
 
-        <span className="total">
-          total :
-          {expenses.reduce((acc, curr) => {
-            return (acc += curr.amount);
-          }, 0)}
-        </span>
+        <h4 className="text-uppercase rounded py-3 w-50 mx-auto mt-3">
+          total : {""}
+          <u>
+            {expenses.reduce((acc, curr) => {
+              return (acc += parseInt(curr.amount));
+            }, 0)}{" "}
+            €
+          </u>
+        </h4>
       </section>
     </>
   );
