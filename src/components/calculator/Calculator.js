@@ -13,7 +13,7 @@ const initialExpenses = [
   { id: uuidv4(), charge: "water", amount: 30 },
 ];
 
-console.log(initialExpenses);
+// console.log(initialExpenses);
 
 export default function Calculator() {
   const [expenses, setExpense] = useState(initialExpenses);

@@ -30,7 +30,7 @@ export default class ManageEvent extends Component {
     this.setState({
       timer: window.setInterval(this.increment.bind(this), 300),
     });
-    console.log(this.state);
+    // console.log(this.state);
   }
   reset() {
     this.pause();

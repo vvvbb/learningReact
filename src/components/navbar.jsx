@@ -4,10 +4,35 @@ import { Link } from "react-router-dom";
 //stateless functionnal component
 
 class NavBar extends Component {
+  state = {
+    isNavCollapsed: true,
+  };
+
+  handleCollapsed = () => {
+    this.setState({ isNavCollapsed: !this.state.isNavCollapsed });
+  };
+
   render() {
     return (
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <div className="collapse navbar-collapse">
+      <nav className="navbar navbar-expand-md navbar-light bg-light">
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarContent"
+          aria-controls="navbarContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          onClick={this.handleCollapsed}
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div
+          className={` ${
+            this.state.isNavCollapsed ? "collapse " : ""
+          } navbar-collapse`}
+          id="navbarContent"
+        >
           <ul className="navbar-nav w-100 justify-content-between">
             <li className="nav-item active">
               <Link className="nav-link" to="/">
@@ -24,9 +49,9 @@ class NavBar extends Component {
                 City List
               </Link>
             </li>
-            <li>
-              <Link className="nav-link disabled" to="/">
-                Disabled {this.props.totalCounters}
+            <li className="nav-item">
+              <Link className="nav-link" to="/test">
+                Test {this.props.totalCounters}
               </Link>
             </li>
           </ul>

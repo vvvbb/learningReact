@@ -15,7 +15,7 @@ class Test extends Component {
   };
 
   styles = {
-    fontSize: 50,
+    fontSize: 20,
     fontWeight: "bold",
     // color: "cyan",
     color: "#00CC00",
@@ -45,8 +45,8 @@ class Test extends Component {
     // React.createElement("div")
     return (
       <div>
-        <h1 style={this.styles}>Hello World Bold</h1>
-        <h1 style={{ fontStyle: "italic" }}>Hello World italic</h1>
+        <h6 style={this.styles}>Hello World Bold</h6>
+        <h6 style={{ fontStyle: "italic" }}>Hello World italic</h6>
 
         <img
           style={this.img_properties}
