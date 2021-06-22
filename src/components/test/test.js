@@ -11,6 +11,10 @@ import PersonList from "./PersonList";
 import Form from "./Form";
 import Test from "./test1";
 import Fetch from "./Fetch";
+import FunctionHook from "./FunctionHook";
+import WelcomeTiltle from "./WelcomeTiltle.js";
+import ButtonAndInput from "./ButtonAndInput";
+import HookUseRef from "./HookUseRef";
 
 import ManageEvent from "./ManageEvent";
 
@@ -56,6 +60,16 @@ export default class test extends Component {
   render() {
     return (
       <section className="container-fluid">
+        <div className="row">
+          <div className="col border d-flex justify-content-center align-items-center">
+            <ButtonAndInput />
+          </div>
+          <div className="col border d-flex justify-content-center align-items-center">
+            <WelcomeTiltle />
+            <WelcomeTiltle user="Peter" primary />
+          </div>
+        </div>
+
         <div className="row">
           <div className="col border d-flex justify-content-center align-items-center">
             <ManageEvent />
@@ -117,6 +131,30 @@ export default class test extends Component {
           </div>
           <div className="col border d-flex justify-content-center align-items-center">
             <Fetch />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col border d-flex justify-content-center align-items-center">
+            <HookUseRef/>
+          </div>
+          <div className="col border d-flex justify-content-center align-items-center">
+            <FunctionHook />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col border d-flex justify-content-center align-items-center">
+            empty cell
+          </div>
+          <div className="col border d-flex justify-content-center align-items-center">
+            empty cell
+          </div>
+        </div>
+        <div className="row">
+          <div className="col border d-flex justify-content-center align-items-center">
+            empty cell
+          </div>
+          <div className="col border d-flex justify-content-center align-items-center">
+            empty cell
           </div>
         </div>
         <div className="row">

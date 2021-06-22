@@ -38,10 +38,11 @@ export default class Fetch extends Component {
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
-      return <div>Loading...</div>;
+      return <div>LoadingL...</div>;
     } else {
       return (
         <ul>
+          <p>JSON Placeholder</p>
           {items.map((item) => (
             <li key={item.id}>
               {item.name} - {item.website}

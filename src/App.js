@@ -1,3 +1,13 @@
+/* 
+ *
+ *  HELLO
+ *  THIS IS A LEARN AND PRATICE REACT PROJECT.
+ *  INSIDE Calculator Project & City List PAGES I USE MOST USED PRATICE TOOLS : CLASS COMPONENT, FONCTION, HOOKS, ROUTER, etc.
+ *  INSIDE LAST TEST PAGE ARE SOME DRAFT.
+ *
+ *
+ */
+
 import React, { Component } from "react";
 
 // import logo from "./logo.svg";
