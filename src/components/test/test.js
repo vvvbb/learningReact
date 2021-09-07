@@ -15,6 +15,7 @@ import FunctionHook from "./FunctionHook";
 import WelcomeTiltle from "./WelcomeTiltle.js";
 import ButtonAndInput from "./ButtonAndInput";
 import HookUseRef from "./HookUseRef";
+import ChangeColor from "./ChangeColor.js"
 
 import ManageEvent from "./ManageEvent";
 
@@ -143,7 +144,7 @@ export default class test extends Component {
         </div>
         <div className="row">
           <div className="col border d-flex justify-content-center align-items-center">
-            empty cell
+            <ChangeColor/>
           </div>
           <div className="col border d-flex justify-content-center align-items-center">
             empty cell
